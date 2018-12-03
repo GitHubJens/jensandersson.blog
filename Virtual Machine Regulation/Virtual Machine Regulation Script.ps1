@@ -476,6 +476,7 @@ foreach($subscription in Get-AzureRmSubscription | Where-Object { $_.Name -eq $s
         if(!$testRun -or ($testRun -and ($virtualMachine.Name -eq $testRunVirtualMachineName)))
         {
             $shutdownDueToNotOnlineDay = $false
+            $ignoreShutdown = $false
 
             # If the virtual machine implements the tag ignoreshutdown and it is set to "yes" the script will skip this machine
             if($virtualMachine.Tags.ContainsKey("ignoreshutdown"))
