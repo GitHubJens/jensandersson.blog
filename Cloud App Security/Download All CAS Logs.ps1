@@ -77,11 +77,11 @@ Param(
 
     [parameter(Mandatory = $false, HelpMessage = "Path where all the logs are output as json files.")]
     [ValidateNotNullOrEmpty()]
-    [string]$outputFilepath = "C:\CASLogs_vNext\Logs",
+    [string]$outputFilepath = "C:\CASLogs\Logs",
 
     [parameter(Mandatory = $false, HelpMessage = "Path that is used for storing a file with the latest fetched log timestamp")]
     [ValidateNotNullOrEmpty()]
-    [string]$latestFetchedLogTimestampFilepath = "C:\CASLogs_vNext\Settings"
+    [string]$latestFetchedLogTimestampFilepath = "C:\CASLogs\Settings"
 )
 
 #############
