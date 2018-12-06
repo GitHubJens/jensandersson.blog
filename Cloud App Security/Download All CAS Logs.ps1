@@ -548,10 +548,10 @@ for($x = 1; $x -le $monthsSinceCreation + 1; $x++)
     # Using the wait for jobs fucntion in order to collect all jobs before finalizing the script run - Sending 0 to wait for all jobs
     Wait-ForJobs 0
 
-    # Change $x to the final value so that we break the for-loop if we are running a delta synchronization
+    # Break out o fthe loop if it is a delta synchronization
     if($Functionality -eq "Delta")
     {
-        $x = $monthsSinceCreation + 1
+        break
     }
     elseif($Functionality -eq "GetAll")
     {
