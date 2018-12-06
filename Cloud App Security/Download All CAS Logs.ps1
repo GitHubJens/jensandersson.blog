@@ -551,7 +551,7 @@ for($x = 1; $x -le $monthsSinceCreation + 1; $x++)
     # Change $x to the final value so that we break the for-loop if we are running a delta synchronization
     if($Functionality -eq "Delta")
     {
-        $x = $monthsSinceCreation
+        $x = $monthsSinceCreation + 1
     }
     elseif($Functionality -eq "GetAll")
     {
